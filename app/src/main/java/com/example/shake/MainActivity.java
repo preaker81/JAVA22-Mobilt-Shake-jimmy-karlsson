@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         Matrix matrix = new Matrix();
         empireImageView.setScaleType(ImageView.ScaleType.MATRIX);
-        matrix.postRotate(-azimuth, empireImageView.getDrawable().getBounds().width() / 2, empireImageView.getDrawable().getBounds().height() / 2);
+        matrix.postRotate(-azimuth, (float) empireImageView.getDrawable().getBounds().width() / 2, (float) empireImageView.getDrawable().getBounds().height() / 2);
         empireImageView.setImageMatrix(matrix);
 
         int color = orientationToColor(azimuth, pitch, roll);
@@ -172,9 +172,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     /**
-     * Show a toast when a shake is detected.
+     * Show a toast with accelerometer sensor values when a shake is detected.
      */
     private void makeToast() {
-        Toast.makeText(this, "Shake detected", Toast.LENGTH_SHORT).show();
+        String message = String.format("Shake detected with accelerometer values: X=%s, Y=%s, Z=%s", last_x, last_y, last_z);
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+
 }
