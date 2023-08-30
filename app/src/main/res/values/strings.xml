@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Shake</string>
+    <string name="format_azimuth">Azimuth (Yaw): %.2f</string>
+    <string name="format_pitch">Pitch: %.2f</string>
+    <string name="format_roll">Roll: %.2f</string>
+    <string name="empire_description">Empire Logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
