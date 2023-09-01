@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private ImageView empireImageView;
 
     // Variables for accelerometer data and shake detection.
-    private static final float SHAKE_THRESHOLD = 500.0f;
+    private static final float SHAKE_THRESHOLD = 400.0f;
     private long lastUpdate;
     private float last_x, last_y, last_z;
     float[] mGravity;
